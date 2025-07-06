@@ -71,18 +71,14 @@ jane_record = Record("Jane")
 jane_record.add_phone("9876543210")
 book.add_record(jane_record)
 
-# Показати всі записи
 for name, record in book.items():
     print(record)
 
-# Редагування номера
 john = book.find("John")
 john.edit_phone("1234567890", "1112223333")
 print(john)
 
-# Пошук конкретного телефону
 found = john.find_phone("5555555555")
 print(f"{john.name}: {found}")
 
-# Видалення запису
 book.delete("Jane")
